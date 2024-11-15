@@ -1,0 +1,3 @@
+default-timeout=5000
+[app-name="Spotify"]
+ignore-timeout=1

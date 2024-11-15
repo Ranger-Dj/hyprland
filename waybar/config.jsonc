@@ -1,0 +1,64 @@
+{
+  "layer": "top",
+  "height": 36,
+
+  "modules-left": ["hyprland/workspaces", "cpu", "memory"],
+  "modules-right": ["network", "bluetooth", "pulseaudio", "tray", "clock"],
+  "modueles-center": ["custom/spotify"],
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+  },
+  "clock": {
+    "timezone": "Asia/Kolkata",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "󰅐 {:%H:%M}",
+    "format-alt": "{:%d-%m}",
+  },
+  "cpu": {
+    "format": "  {usage}% ",
+    "tooltip": true,
+    "on-click": "gnome-system-monitor",
+  },
+  "memory": {
+    "format": "  {}% ",
+    "on-click": "gnome-system-monitor",
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{essid}",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "󰤭",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  },
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": " ",
+      "3": " ",
+      "4": "",
+      "5": "󰎆",
+      "6": " ",
+      "urgent": "",
+      "active": "",
+      "default": "",
+    },
+  },
+  "bluetooth": {
+    "on-click": "blueberry",
+  },
+
+  "pulseaudio": {
+    "format": "   {volume}%",
+    "format-muted": "",
+    "on-click": "pavucontrol",
+    "tooltip-format": "open volume control",
+  },
+}
